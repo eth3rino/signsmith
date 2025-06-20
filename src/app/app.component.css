@@ -1,0 +1,12 @@
+.outlet-wrapper 
+{
+    overflow: auto;
+    overflow-x: hidden;
+    flex: 1 1 auto;
+    /* box-shadow: inset 0px 10px 20px black; */
+}
+
+app-header
+{
+    z-index: 1000;
+}

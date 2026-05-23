@@ -4,9 +4,7 @@ import { RouterModule } from '@angular/router';
 @Component({
   selector: 'app-welcome',
   imports: [RouterModule],
-  templateUrl: './welcome.component.html',
-  styleUrl: './welcome.component.css'
+  templateUrl: './welcome.html',
+  styleUrl: './welcome.scss',
 })
-export class WelcomeComponent {
-
-}
+export class Welcome {}

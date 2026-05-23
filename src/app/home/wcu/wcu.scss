@@ -3,6 +3,7 @@
     display: grid;
     grid-template-columns: 3fr 2fr;
     height: 900px;
+    font-family: 'Poppins';
 }
 
 .home-wcu .text-box
@@ -32,16 +33,20 @@
 }
 .home-wcu .text-box .text-list .text-list-item
 {
+    display: flex;
+
     margin: 50px;
 }
 .home-wcu .text-box .text-list .text-list-item i
 {
     /* line-height: 2rem; */
-    font-size: 1rem;
+    color: #ff8a00;
+    font-size: .8rem;
+    
     font-weight: 900;
     vertical-align: middle;
     /* padding-bottom: 3px; */
-    padding: 0px 5px 3px 0px ;
+    padding: 0px 10px 3px 0px ;
 }   
 
 .home-wcu .text-box .text-end

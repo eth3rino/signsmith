@@ -1,0 +1,35 @@
+.contact-container {
+    height: 60%;
+    color: white;
+    margin-bottom: 100px;
+    font-family: 'Poppins';
+    display: flex;
+    flex-direction: column;
+    padding: 50px 80px;
+
+    .contact-title {
+        font-size: 5rem;
+        text-transform: uppercase;
+        font-style: italic;
+        font-weight: 900;
+    }
+
+    .contact {
+        font-size: 3rem;
+        padding: 30px 70px;
+        display: flex;
+        text-transform: uppercase;
+        font-weight: 700;
+
+        i {
+            margin: 10px 35px;
+            font-size: 4rem;
+        }
+
+        a {
+            color: white;
+        }
+    }
+    .instagram i {color: #ff2cdc;}
+    .whatsapp i {color: #00ff55}
+}

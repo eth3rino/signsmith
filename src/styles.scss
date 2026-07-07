@@ -1,6 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Black+Ops+One&family=Neonderthaw&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 *
 {
     padding: 0px;
@@ -13,7 +12,7 @@ html, body
 {
     height: 100%;
     width: 100%;
-    background-color: #1b1b1b;
+    // background-color: #1b1b1b;
     overflow: hidden;
     scroll-behavior: smooth;
 }
@@ -25,8 +24,26 @@ app-root
     flex-direction: column;
 }
 
+:root {
+    --clr-background: #121317;
+    --clr-accent: #ff8a00;
+    --clr-text: #e8e8e8;
+    --clr-subtext: #979797;
+    --clr-guideline: #494949;
 
-.orange-text
+    --glow: 0 0 4px  color-mix(in srgb, currentColor 90%, transparent),   /* tight, bright core */
+    0 0 12px color-mix(in srgb, currentColor 70%, transparent),
+    0 0 26px color-mix(in srgb, currentColor 50%, transparent),
+    0 0 46px color-mix(in srgb, currentColor 30%, transparent);   /* wide, soft bloom */
+
+
+    font-size: clamp(12px, 1vw, 24px);
+}
+
+.accent
 {
-    color: #ff8a00;
+    color: var(--clr-accent)
+}
+.glow {
+    text-shadow: var(--glow)
 }

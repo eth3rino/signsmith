@@ -6,4 +6,6 @@ import { Component } from '@angular/core';
   templateUrl: './trabajos.html',
   styleUrl: './trabajos.scss',
 })
-export class Trabajos {}
+export class Trabajos {
+  selectedWorks = []
+}

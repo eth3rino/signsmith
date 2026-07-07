@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
+import { LucideArrowDown } from '@lucide/angular';
 
 @Component({
   selector: 'app-hero',
-  imports: [],
+  imports: [LucideArrowDown],
   templateUrl: './hero.html',
   styleUrl: './hero.scss',
 })

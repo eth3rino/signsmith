@@ -1,11 +1,17 @@
-import { Component } from '@angular/core';
+import { Component, signal, WritableSignal } from '@angular/core';
 import { RouterLink } from '@angular/router';
-import { Nav } from './nav/nav';
+import { LucideMenu, LucideX } from '@lucide/angular';
 
 @Component({
   selector: 'app-header',
-  imports: [RouterLink, Nav],
+  imports: [RouterLink, LucideMenu, LucideX],
   templateUrl: './header.html',
   styleUrl: './header.scss',
 })
-export class Header {}
+export class Header {
+  isNavOpen: WritableSignal<boolean> = signal(false)
+
+  toggleNav() {
+    this.isNavOpen.update((isnavOpen) => !isnavOpen)
+  }
+}

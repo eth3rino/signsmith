@@ -1,4 +1,35 @@
-<div class="header">
-    <a routerLink="/" class="logo">sign<span class="accent glow">smith</span></a>
-    <app-nav/>
-</div>
+<header class="header">
+    <nav class="nav desktop">
+        <a routerLink="." fragment="hero" class="logo">sign<span class="accent">smith</span></a>
+        <a routerLink="." fragment="servicios" class="servicios link">servicios</a>
+        <a routerLink="." fragment="trabajos" class="trabajos link">trabajos</a>
+        <a routerLink="." fragment="nosotros" class="nosotros link">nosotros</a>
+        <a routerLink="." fragment="contact" class="contacto link">contactanos</a>
+    </nav>
+
+    <nav class="nav mobile">
+        <div class="header-top">
+            <a routerLink="/" class="logo">sign<span class="accent">smith</span></a>
+            <button type="button" class="menu-toggle" (click)="toggleNav()"><svg lucideMenu></svg></button>
+        </div>
+        
+        
+    </nav>
+</header>
+@if (isNavOpen()) {
+    <div class="nav-menu-container" animate.leave="nav-leave-animation">
+        <div class="nav-menu">
+            <button class="close-nav" (click)="toggleNav()"><svg lucideX></svg></button>
+            <a routerLink="." fragment="servicios" class="link">servicios</a>
+            <a routerLink="." fragment="trabajos" class="link">trabajos</a>
+            <a routerLink="." fragment="nosotros" class="link">nosotros</a>
+            <a routerLink="." fragment="contact" class="link">contactanos</a>
+            <div class="nav-footer">
+                <span class="footer-location">Buenos Aires, AR</span>
+                <a href="" class="footer-link">WAPP:11 4404-8844</a>
+                <a href="" class="footer-link">ig:signsmithpublicidad</a>
+                <a href="" class="footer-link">elianmeaca@gmail.com</a>
+            </div>
+        </div>
+    </div>
+}

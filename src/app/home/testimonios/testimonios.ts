@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
+import { LucideQuote } from '@lucide/angular';
 
 @Component({
   selector: 'app-testimonios',
-  imports: [],
+  imports: [LucideQuote],
   templateUrl: './testimonios.html',
   styleUrl: './testimonios.scss',
 })

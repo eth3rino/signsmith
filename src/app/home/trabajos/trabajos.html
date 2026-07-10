@@ -1,16 +1,21 @@
-<section class="work-wrapper">
+<section class="work">
     <div class="work-header">
         <h2 class="work-title">trabajos realizados</h2>
-        <p class="work-caption">06 projectos - mas en instagram <svg></svg></p>
+        <p class="work-caption">06 projectos - mas en instagram</p>
     </div>
     <div class="work-container">
-        @for (work of selectedWorks; track $index) {
-            <div class="work-entry"> <!-- add bg image later -->
+        @for (work of loopWorks; track $index) {
+            <div class="work-entry">
+                <img [src]="work.image.src" [alt]="work.image.alt" class="work-image">
                 <div class="work-info">
-                    
+                    <span class="work-info-text">
+                        <span class="info-text-service">{{work.service}}</span>
+                        <br>
+                        <span class="info-text-reference">{{work.reference}}</span>
+                    </span>
                 </div>
             </div>
         }
     </div>
-    <a class="link-to-instagram">Ver más en Instagram</a>
+    <div class="link-container"><a href="https://www.instagram.com/signsmithpublicidad" class="link-to-instagram">Ver más en Instagram</a></div>
 </section>

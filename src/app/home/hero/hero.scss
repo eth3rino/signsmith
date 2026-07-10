@@ -27,7 +27,7 @@
             text-transform: uppercase;
             text-align: center;
             
-            max-width: 10ch;
+            // max-width: 10ch;
             line-height: 1em;
 
             .accent {
@@ -107,6 +107,7 @@
                 color: var(--clr-subtext);
                 display: inline-flex;
                 gap: .5em;
+                text-decoration: none;
                 svg {
                     width: 1em;
                     height: 1em;
@@ -118,7 +119,7 @@
 
     &::before {
         content: '';
-        width: 53em;
+        width: 100vw;
         height: 32em;
         opacity: .3;
         z-index: -1;
@@ -135,7 +136,7 @@
         color-mix(currentColor 30%, transparent),
         color-mix(currentColor 00%, transparent),
         );
-        clip-path: polygon(20% 0, 80% 0, 100% 100%, 0% 100%);
+        // clip-path: polygon(20% 0, 80% 0, 100% 100%, 0% 100%);
         animation: light-flicker 1000ms ease forwards, glow-up 2000ms ease 1500ms forwards;
     }
     &::after {
@@ -177,6 +178,11 @@
             .hero-title {
                 font-size: 8em;
             }
+        }
+
+        &::before {
+            clip-path: polygon(20% 0, 80% 0, 100% 100%, 0% 100%);
+            width: 55em;
         }
     }
 }

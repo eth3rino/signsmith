@@ -6,30 +6,27 @@
     margin: 0px;
     box-sizing: border-box;
     font-family: inherit;
+    color: inherit;
 }
 
-html, body 
-{
-    height: 100%;
-    width: 100%;
-    // background-color: #1b1b1b;
-    overflow: hidden;
-    scroll-behavior: smooth;
-}
-
-app-root
-{
-    height: 100%;
-    display: flex;
-    flex-direction: column;
+body {
+    background-color: var(--clr-background);
 }
 
 :root {
+    --graphite-950: #121317;
+    --graphite-900: #1b1d22;
+    --graphite-850: #22242b;
+    --graphite-800: #2b2e36;
     --clr-background: #121317;
-    --clr-accent: #ff8a00;
+    --clr-background-light: #1f2228;
+    --clr-surface: #282a30;
+    --clr-accent: #ff7300;
     --clr-text: #e8e8e8;
     --clr-subtext: #979797;
     --clr-guideline: #494949;
+
+    --parallax-tile-height: 1200px;
 
     --glow: 0 0 4px  color-mix(in srgb, currentColor 90%, transparent),   /* tight, bright core */
     0 0 12px color-mix(in srgb, currentColor 70%, transparent),
@@ -37,7 +34,7 @@ app-root
     0 0 46px color-mix(in srgb, currentColor 30%, transparent);   /* wide, soft bloom */
 
 
-    font-size: clamp(12px, 1vw, 24px);
+    font-size: clamp(11px, 1vw, 24px);
 }
 
 .accent

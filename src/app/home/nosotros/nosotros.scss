@@ -1,0 +1,23 @@
+.nosotros {
+
+    .nosotros-container {
+
+        .nosotros-box {
+
+            &.text {
+                
+                .nosotros-title {}
+                .nosotros-caption {}
+                .nosotros-info {
+
+                    .info-item {}
+                }
+            }
+            &.stats {
+                
+                .nosotros-neon-text {}
+                .nosotros-stats {}
+            }
+        }
+    }
+}

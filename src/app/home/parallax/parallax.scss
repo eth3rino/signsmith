@@ -1,0 +1,33 @@
+.ambient-bg {
+    --parallax-tile-height: 1200px;
+    
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 0;
+
+    width: 100%;
+    height: calc(100% + var(--parallax-tile-height));
+
+    pointer-events: none;
+
+    background-repeat: repeat-y;
+    background-size: 100% var(--parallax-tile-height);
+    background-image:
+    /* each spot's effective glow radius is well clear of the 0px / 1200px edges */
+    radial-gradient(420px 300px at 14% 200px,  rgba(255,106,31,.16), transparent 70%),
+    radial-gradient(500px 360px at 86% 320px,  rgba(255,106,31,.12), transparent 70%),
+    radial-gradient(420px 320px at 78% 620px,  rgba(120,150,190,.09), transparent 70%),
+    radial-gradient(460px 340px at 10% 860px,  rgba(255,106,31,.10), transparent 70%),
+    radial-gradient(520px 300px at 52% 980px, rgba(255,106,31,.08), transparent 70%);
+
+    &::before {
+        content: '';
+        position: absolute; inset: 0;
+        background: linear-gradient(90deg, transparent 30%, rgba(255, 255, 255, .035) 45%, transparent 60%);
+    }
+}
+
+:host {
+    position: absolute;
+}

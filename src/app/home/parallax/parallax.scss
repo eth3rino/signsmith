@@ -13,14 +13,12 @@
 
     background-repeat: repeat-y;
     background-size: 100% var(--parallax-tile-height);
-    background-image:
-    /* each spot's effective glow radius is well clear of the 0px / 1200px edges */
-    radial-gradient(420px 300px at 14% 200px,  rgba(255,106,31,.16), transparent 70%),
-    radial-gradient(500px 360px at 86% 320px,  rgba(255,106,31,.12), transparent 70%),
-    radial-gradient(420px 320px at 78% 620px,  rgba(120,150,190,.09), transparent 70%),
-    radial-gradient(460px 340px at 10% 860px,  rgba(255,106,31,.10), transparent 70%),
-    radial-gradient(520px 300px at 52% 980px, rgba(255,106,31,.08), transparent 70%);
-
+background-image:
+  radial-gradient(clamp(420px, 38vw, 670px) clamp(300px, 27vw, 479px) at 14% 240px,  rgba(255,106,31,.24), transparent 50%),
+  radial-gradient(clamp(500px, 45vw, 800px) clamp(360px, 32vw, 576px) at 86% 320px,  rgba(255,106,31,.18), transparent 50%),
+  radial-gradient(clamp(420px, 38vw, 670px) clamp(320px, 29vw, 511px) at 78% 620px,  rgba(120,150,190,.14), transparent 50%),
+  radial-gradient(clamp(460px, 41vw, 735px) clamp(340px, 30vw, 543px) at 10% 860px,  rgba(255,106,31,.15), transparent 50%),
+  radial-gradient(clamp(520px, 47vw, 830px) clamp(300px, 27vw, 479px) at 52% 960px,  rgba(255,106,31,.13), transparent 50%);
     &::before {
         content: '';
         position: absolute; inset: 0;

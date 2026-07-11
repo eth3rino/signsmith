@@ -7,7 +7,7 @@
     font-family: 'Work Sans';
     color: var(--clr-text);
 
-    height: calc(100svh - 4rem);
+    height: 100svh;
     background-color: var(--clr-background);
 
     position: relative;
@@ -141,17 +141,8 @@
     }
     &::after {
         content: '';
-        width: 45em;
-        height: 16em;
-        left: 50%;
-        translate: -50%;
-        filter: blur(100px);
-        position: absolute;
-        top: 25em;
-        color: var(--clr-accent);
-        background-color: color-mix(in srgb, currentColor 10%, transparent);
-        z-index: -1;
-        animation: light-flicker 1000ms ease forwards, glow-up 2000ms ease 1500ms forwards;
+        height: 5rem;
+        margin-top: -5rem;
     }
 }
 

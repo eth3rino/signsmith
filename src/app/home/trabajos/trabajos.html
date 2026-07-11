@@ -1,11 +1,11 @@
-<section class="work">
+<section class="work" id="trabajos">
     <div class="work-header">
         <h2 class="work-title">trabajos realizados</h2>
-        <p class="work-caption">06 projectos - mas en instagram</p>
+        <p class="work-caption">06 projectos — mas en instagram</p>
     </div>
-    <div class="work-container">
+    <div class="work-container" aria-label="a carousel of images">
         @for (work of loopWorks; track $index) {
-            <div class="work-entry">
+            <div class="work-entry" [aria-hidden]="$index > 5 ? 'true' : 'false'">
                 <img [src]="work.image.src" [alt]="work.image.alt" class="work-image">
                 <div class="work-info">
                     <span class="work-info-text">

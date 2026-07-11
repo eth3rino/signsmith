@@ -4,7 +4,7 @@ import { Directive, ElementRef, NgZone, OnDestroy, OnInit, Renderer2 } from '@an
   selector: '[appParallaxBackground]',
 })
 export class ParallaxBackground implements OnDestroy, OnInit {
-  private factor: number = 0.5;
+  private factor: number = 0.35;
   private tileHeight: number = 1200; // must match --ambient-tile-height in CSS
   private scrollListener?: () => void;
   private ticking: boolean = false;

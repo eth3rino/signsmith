@@ -5,6 +5,8 @@
 
     position: sticky;
     top: 0;
+    left: 0;
+    right: 0;
     z-index: 2;
 
     .nav {
@@ -51,6 +53,11 @@
                     scale: 1;
                     transform-origin: left;
                 }
+
+                &.visible::before {
+                    scale: 1;
+                    transform-origin: left;
+                }
             }
         }
 
@@ -93,7 +100,7 @@
 .nav-menu-container {
     display: flex;
 
-    position: absolute;
+    position: fixed;
     inset: 0;
     z-index: 3;
 

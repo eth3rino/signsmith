@@ -26,6 +26,7 @@ body {
     --clr-subtext: #979797;
     --clr-guideline: #494949;
 
+    scroll-behavior: smooth;
 
     --glow: 0 0 4px  color-mix(in srgb, currentColor 90%, transparent),   /* tight, bright core */
     0 0 12px color-mix(in srgb, currentColor 70%, transparent),

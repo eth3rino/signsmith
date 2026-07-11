@@ -6,6 +6,7 @@
     font-size: 1rem;
     color: var(--clr-text);
 
+    padding: 5rem 0;
 
     .contact-container {
         display: flex;
@@ -32,6 +33,10 @@
                 width: 100%;
                 padding: 3.5em 5em;
                 border: 1px solid var(--clr-guideline);
+
+                display: flex;
+                flex-direction: column;
+                align-items: center;
 
                 svg, ng-icon {
                     width: 2.5em;
@@ -73,6 +78,7 @@
                 padding: 0 3em;
 
                 .contact-option {
+                   align-items: start; 
                     .contact-label, .contact-info {
                         text-align: unset;
                     }

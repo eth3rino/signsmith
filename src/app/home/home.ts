@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { AfterViewInit, Component, inject, OnDestroy, OnInit } from '@angular/core';
 import { Hero } from './hero/hero';
 import { HomeServices } from './home-services/home-services';
 import { Nosotros } from './nosotros/nosotros';
@@ -7,6 +7,7 @@ import { Testimonios } from './testimonios/testimonios';
 import { WorkProcess } from './work-process/work-process';
 import { Contact } from './contact/contact';
 import { Parallax } from './parallax/parallax';
+import { ScrollSpy } from '../services/scroll-spy';
 
 @Component({
   selector: 'app-home',
@@ -14,4 +15,15 @@ import { Parallax } from './parallax/parallax';
   templateUrl: './home.html',
   styleUrl: './home.scss',
 })
-export class Home {}
+export class Home implements AfterViewInit, OnDestroy{
+  private scrollSpy = inject(ScrollSpy)
+
+  observableSections: string[] = ['servicios', 'trabajos', 'nosotros', 'contacto']
+  ngAfterViewInit(): void {
+    console.log('starting observer...')
+    this.scrollSpy.observeSections(this.observableSections)
+  }
+  ngOnDestroy(): void {
+    this.scrollSpy.disconnect();
+  }
+}

@@ -3,7 +3,7 @@
     flex-direction: column;
     gap: 2em;
 
-    padding: 2em 0;
+    padding: 12rem 0;
 
     font-size: 1rem;
     font-family: 'Work Sans';
@@ -121,6 +121,7 @@
 
 @media screen and (min-width: 800px) {
     .work {
+        padding: 6em 0;
         .work-header {
             flex-direction: row;
             justify-content: space-between;

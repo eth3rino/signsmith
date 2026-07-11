@@ -32,6 +32,13 @@
                 width: 100%;
                 padding: 3.5em 5em;
                 border: 1px solid var(--clr-guideline);
+
+                svg, ng-icon {
+                    width: 2.5em;
+                    height: 2.5em;
+                    margin-bottom: .5em;
+                    color: var(--clr-accent);
+                }
                 
                 .contact-label {
                     color: var(--clr-subtext);
@@ -62,6 +69,8 @@
             .contact-grid {
                 grid-template-columns: 1fr 1fr 1fr;
                 max-width: unset;
+
+                padding: 0 3em;
 
                 .contact-option {
                     .contact-label, .contact-info {

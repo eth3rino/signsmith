@@ -1,0 +1,74 @@
+.contact {
+    display: grid;
+    gap: 8rem;
+
+    font-family: 'Work Sans';
+    font-size: 1rem;
+    color: var(--clr-text);
+
+
+    .contact-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: .5em;
+        padding: 0 12vw;
+
+
+        .contact-title {
+            font-size: 3em;
+            font-family: 'Barlow Condensed';
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .contact-grid {
+            display: grid;
+            gap: .5em;
+            width: 100%;
+            max-width: 25em;
+            .contact-option {
+                background-color: var(--graphite-850);
+                width: 100%;
+                padding: 3.5em 5em;
+                border: 1px solid var(--clr-guideline);
+                
+                .contact-label {
+                    color: var(--clr-subtext);
+                    text-transform: uppercase;
+                    font-family: 'Barlow Condensed';
+                    font-size: 1.1em;
+                    text-align: center;
+                }
+                .contact-info {
+                    margin-top: .5em;
+                    
+                    font-family: 'Barlow Condensed';
+                    font-size: 1.5em;
+                    text-transform: uppercase;
+                    text-align: center;
+                }
+            }
+        }
+    }
+}
+
+
+
+@media screen and (min-width: 800px) {
+    .contact {
+        .contact-container {
+            // place-items: unset;
+            .contact-grid {
+                grid-template-columns: 1fr 1fr 1fr;
+                max-width: unset;
+
+                .contact-option {
+                    .contact-label, .contact-info {
+                        text-align: unset;
+                    }
+                }
+            }
+        }
+    }
+}

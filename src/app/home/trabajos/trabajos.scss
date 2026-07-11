@@ -11,6 +11,7 @@
     color: var(--clr-text);
     overflow: hidden;
 
+
     .work-header {
         display: flex;
         flex-direction: column;
@@ -114,4 +115,24 @@
 @keyframes work-loop {
     from { transform: translateX(0); }
     to { transform: translateX(-50%); }
+}
+
+
+
+@media screen and (min-width: 800px) {
+    .work {
+        .work-header {
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: flex-end;
+            
+            padding: 0 12vw;
+
+            .work-title {
+                font-size: 6em;
+                max-width: 10ch;
+                letter-spacing: 0;
+            }
+        }
+    }
 }

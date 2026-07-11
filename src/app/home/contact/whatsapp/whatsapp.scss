@@ -1,0 +1,40 @@
+.whatsapp-container {
+    display: grid;
+    place-items: center;
+    gap: 1em;
+    
+    font-family: 'Work Sans';
+    font-size: 1rem;
+    color: var(--clr-text);
+    
+    background-color: var(--clr-background);
+    border-top: 1px solid var(--clr-accent);
+    border-bottom: 1px solid var(--clr-accent);
+    box-shadow: 0 0 1em var(--clr-accent);
+    padding: 2em 0;
+
+    .whatsapp-title {
+        font-family: 'Barlow Condensed';
+        font-size: 2.5em;
+        text-transform: uppercase;
+        text-align: center;
+        letter-spacing: 1px;
+    }
+    .whatsapp-link {
+        padding: 1em;
+        margin-top: 1em;
+        box-shadow: 0 0 1.2em var(--clr-accent);
+
+        background-color: var(--clr-accent);
+        color: var(--graphite-950);
+
+        display: inline-flex;
+        align-items: center;
+        gap: .5em;
+
+        text-decoration: none;
+        text-transform: uppercase;
+        font-weight: bolder;
+        font-size: 1.2em;
+    }
+}

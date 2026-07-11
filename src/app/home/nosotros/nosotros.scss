@@ -1,22 +1,133 @@
 .nosotros {
+    color: var(--clr-text);
+    
+    font-size: 1rem;
+    font-family: 'Work Sans';
+
+    display: grid;
+    place-items: center;
+
 
     .nosotros-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 5em;
 
         .nosotros-box {
+            display: grid;
 
             &.text {
+                gap: 1em;
                 
-                .nosotros-title {}
-                .nosotros-caption {}
+                .nosotros-title {
+                    font-family: 'Barlow Condensed';
+                    font-size: 4em;
+                    text-transform: uppercase;
+                    text-align: center;
+                }
+                .nosotros-caption {
+                    max-width: 50ch;
+                    line-height: 1.3em;
+                    text-align: center;
+                }
                 .nosotros-info {
+                    margin-left: 2em;
+                    display: grid;
 
-                    .info-item {}
+                    .info-item {
+                        max-width: 45ch;
+                        padding: .5em;
+                        line-height: 1.3em;
+
+                        display: inline-flex;
+                        gap: 1em;
+
+                        &::before {
+                            content: '';
+                            width: 1em;
+                            height: .5em;
+                            background-color: var(--clr-accent);
+                            margin-top: .4em;
+                            border-radius: 100%;
+                            box-shadow: 0 0 .5em var(--clr-accent);
+
+                        }
+                    }
                 }
             }
             &.stats {
+                position: relative;
+                background-color: color-mix(in srgb, var(--graphite-900) 60%, transparent);
+                border: 1px solid var(--graphite-800);
+                font-size: 1.4em;
                 
-                .nosotros-neon-text {}
-                .nosotros-stats {}
+                .nosotros-neon-text {
+                    position: absolute;
+                    // opacity: 0;
+                    font-family: 'Neonderthaw';
+                    font-size: 2.5em;
+                    text-wrap: nowrap;
+                    rotate: -7deg;
+                    top: -1em;
+                    // left: -1em;
+                    color: #ff0008;
+                }
+                .nosotros-stat {
+                    padding: 1em;
+                    display: inline-flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    gap: 3em;
+                    font-family: 'Barlow Condensed';
+                    font-size: 1.2em;
+
+                    color: var(--clr-subtext);
+                    text-transform: uppercase;
+
+
+                    &:not(:last-child) {
+                        border-bottom: 1px dashed var(--graphite-800);
+                    }
+
+                    .stat-text {
+                        font-size: .8em;
+                        letter-spacing: 1px;
+                    }
+
+                    .accent {
+                        font-size: 2.5em;
+                        font-weight: bolder;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+@media screen and (min-width: 850px) {
+    .nosotros {
+        .nosotros-container {
+            flex-direction: row;
+
+            .nosotros-box {
+
+                &.text {
+                    .nosotros-title, .nosotros-caption {
+                        text-align: unset;
+                    }
+                }
+
+                &.stats {
+                    font-size: 1.1em;
+
+                    .nosotros-neon-text {
+                        left: -.7em;
+                        top: -1em;
+                    }
+                }
             }
         }
     }
